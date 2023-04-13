@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Responsive Navigation Bar</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav__logo"><a href="#">Web Design Mastery</a></div>
+        <ul class="nav__links">
+          <li class="link">Home</li>
+          <li class="link">About</li>
+          <li class="link">Service</li>
+          <li class="link">Blog</li>
+          <li class="link">Contact</li>
+        </ul>
+        <div class="toggle__btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+      <div class="hero">
+        <h2>ENJOY THE</h2>
+        <h1>WORLD</h1>
+        <button>Explore Now</button>
+      </div>
+    </header>
+
+    <script>
+      const toggleBtn = document.querySelector(".toggle__btn");
+      const toggleBtnIcon = document.querySelector(".toggle__btn i");
+      const menu = document.querySelector(".nav__links");
+
+      toggleBtn.onclick = function () {
+        menu.classList.toggle("open");
+        const isOpen = menu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen ? "ri-close-line" : "ri-menu-line";
+      };
+    </script>
+  </body>
+</html>
